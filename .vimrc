@@ -65,7 +65,6 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mileszs/ack.vim'
 Plugin 'w0rp/ale'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
 
@@ -154,32 +153,6 @@ let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-J> <Plug>(ale_next_wrap)
-
-
-"-----------YCM SEETINGS---------------
-let g:ycm_error_symbol='>>'
-let g:ycm_warning_symbol='>*'
-nnoremap <leader>gc :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
-"設定全域性配置檔案的路徑
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-"開啟基於tag的補全，可以在這之後新增需要的標籤路徑
-let g:ycm_collect_identifiers_from_tags_files = 1
-"開啟語義補全
-let g:ycm_seed_identifiers_with_syntax = 1
-"在接受補全後不分裂出一個視窗顯示接受的項
-set completeopt-=preview
-"不顯示開啟vim時檢查ycm_extra_conf檔案的資訊
-let g:ycm_confirm_extra_conf=0
-"每次重新生成匹配項，禁止快取匹配項
-let g:ycm_cache_omnifunc=0
-"在註釋中也可以補全
-let g:ycm_complete_in_comments=1
-"輸入第一個字元就開始補全
-let g:ycm_min_num_of_chars_for_completion=1
-"不查詢ultisnips提供的程式碼模板補全，如果需要，設定成1即可
-let g:ycm_use_ultisnips_completer=0
 
 
 "-----------INDENTLINE SEETINGS---------------
